@@ -11,9 +11,7 @@ public class Disappear_projectile : MonoBehaviour
         if (col.gameObject.name == "Target")
         {
             Debug.Log("Collision Detected");
-            p3.GetComponent<Renderer>().enabled = false;
             Destroy(p3);
         }
     }
-
 }
