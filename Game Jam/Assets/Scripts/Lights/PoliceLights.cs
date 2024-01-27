@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -9,6 +10,8 @@ public class PoliceLights : MonoBehaviour
     public Color first;
     public Color second;
     public Transform parent;
+    public float timer = 0;
+    public float speed = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,6 +19,7 @@ public class PoliceLights : MonoBehaviour
         StartCoroutine(flashLight());
         parent = GetComponentInParent<Transform>();
         Debug.Log(parent.position);
+        StartCoroutine(startMoving());
     }
 
     public IEnumerator flashLight(){
@@ -32,6 +36,12 @@ public class PoliceLights : MonoBehaviour
         yield return new WaitForSeconds(2);
         SceneManager.LoadScene("UI");
     }
+
+    public IEnumerator startMoving(){
+        Debug.Log("startMoving");
+        yield return new WaitForSeconds(5);
+        speed = 0.5f; 
+    }
     // Update is called once per frame
     void Update()
     {
@@ -39,6 +49,6 @@ public class PoliceLights : MonoBehaviour
             StartCoroutine(endGame());
         }
         transform.Rotate(0 , 2, 0 , Space.World);
-        parent.position = Vector3.MoveTowards(parent.position , new Vector3(-7 , 16, -13) , 2f * Time.fixedDeltaTime);
+        parent.position = Vector3.MoveTowards(parent.position , new Vector3(-7 , 16, -13) , speed * Time.fixedDeltaTime);            
     }
 }
