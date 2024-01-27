@@ -1078,7 +1078,7 @@ MonoBehaviour:
   maxMob: 15
   totMob: 0
   spawnRate: 1
-  bambino: {fileID: 0}
+  bambino: {fileID: 8090637748960113693, guid: 316ebf5edf161684cb5f2bf541e826aa, type: 3}
   timer: 0
   spawn: []
 --- !u!1001 &299623129
