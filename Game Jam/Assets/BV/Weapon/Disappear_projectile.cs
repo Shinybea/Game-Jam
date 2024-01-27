@@ -7,7 +7,7 @@ public class Disappear_projectile : MonoBehaviour
       void OnCollisionEnter(Collision col)
     {
         //despawn target
-        if (col.gameObject.CompareTag("Target"))
+        if (col.gameObject.CompareTag("Bambino"))
         {
             Debug.Log("Collision Detected");
             Destroy(col.gameObject);
