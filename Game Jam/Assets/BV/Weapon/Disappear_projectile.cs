@@ -6,13 +6,13 @@ public class Disappear_projectile : MonoBehaviour
 {
       void OnCollisionEnter(Collision col)
     {
-        //despawn projectile
+        //despawn target
         if (col.gameObject.CompareTag("Target"))
         {
             Debug.Log("Collision Detected");
             Destroy(col.gameObject);
         
-            //despawn target
+            //despawn projectile
             Debug.Log("Target Hit");
             Destroy(gameObject);
         }
