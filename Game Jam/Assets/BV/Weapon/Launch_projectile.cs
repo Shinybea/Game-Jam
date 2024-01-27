@@ -47,14 +47,7 @@ public class Launch_projectile : MonoBehaviour
                 timer = 0;
                 //reset cooldown
                 check = true; 
-                
-
-            }
-
-
+            }        
         }
-        
     }
-    
-   
 }
