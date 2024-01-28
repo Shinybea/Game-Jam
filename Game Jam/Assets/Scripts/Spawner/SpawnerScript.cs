@@ -12,6 +12,7 @@ public class SpawnerScript : MonoBehaviour
     public GameObject bambino;
     public float timer = 0;
     public GameObject[] spawn;
+    public bool abled = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,12 +22,16 @@ public class SpawnerScript : MonoBehaviour
 
     public IEnumerator spawner(){
         while(true){
-            yield return new WaitForSeconds(spawnRate);
-            totMob = GameObject.FindGameObjectsWithTag("Bambino").Length;
-            Debug.Log(totMob);            
-            if(totMob < maxMob){
-                int rand = UnityEngine.Random.Range(0 , spawn.Length);
-                Instantiate(bambino , spawn[rand].transform.position,Quaternion.identity);
+            if(abled){
+                yield return new WaitForSeconds(spawnRate);
+                totMob = GameObject.FindGameObjectsWithTag("Bambino").Length;
+                Debug.Log(totMob);            
+                if(totMob < maxMob){
+                    int rand = UnityEngine.Random.Range(0 , spawn.Length);
+                    Instantiate(bambino , spawn[rand].transform.position,Quaternion.identity);
+                }
+            } else {
+                yield return new WaitForSeconds(1);
             }
         }
     }
