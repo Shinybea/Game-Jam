@@ -12,6 +12,8 @@ TagManager:
   - Spawner
   - Bambino
   - Light
+  - Punteggio
+  - Aim
   layers:
   - Default
   - TransparentFX

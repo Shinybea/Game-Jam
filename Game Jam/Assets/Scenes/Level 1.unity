@@ -4684,39 +4684,43 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 970189275363032434, guid: 55c65e3d0b9652f4d81cd6183f0feb12, type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.70623225
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 970189275363032434, guid: 55c65e3d0b9652f4d81cd6183f0feb12, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.7043121
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 970189275363032434, guid: 55c65e3d0b9652f4d81cd6183f0feb12, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.050964158
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 970189275363032434, guid: 55c65e3d0b9652f4d81cd6183f0feb12, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.05082559
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 970189275363032434, guid: 55c65e3d0b9652f4d81cd6183f0feb12, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 90.156
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 970189275363032434, guid: 55c65e3d0b9652f4d81cd6183f0feb12, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -171.745
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 970189275363032434, guid: 55c65e3d0b9652f4d81cd6183f0feb12, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 180
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 5071865777315005726, guid: 55c65e3d0b9652f4d81cd6183f0feb12, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6242406780275089905, guid: 55c65e3d0b9652f4d81cd6183f0feb12, type: 3}
       propertyPath: m_Name
       value: Launch_origin
+      objectReference: {fileID: 0}
+    - target: {fileID: 6242406780275089905, guid: 55c65e3d0b9652f4d81cd6183f0feb12, type: 3}
+      propertyPath: m_TagString
+      value: Aim
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: -6812711811436676632, guid: 55c65e3d0b9652f4d81cd6183f0feb12, type: 3}
