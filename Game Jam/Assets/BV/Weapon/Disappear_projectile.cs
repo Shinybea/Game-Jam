@@ -5,7 +5,15 @@ using UnityEngine;
 
 public class Disappear_projectile : MonoBehaviour
 {
+      public AudioSource[] sounds;
+      IEnumerator audioKill(){
 
+        int rand = UnityEngine.Random.Range(0 , sounds.Length);   
+        sounds[rand].Play();
+        yield return new WaitForSeconds(sounds[rand].clip.length);
+        gameObject.GetComponent<MeshRenderer>().enabled = false;
+        Destroy(gameObject);        
+    }
       void OnCollisionEnter(Collision col)
     {
         Debug.Log(col.gameObject.name);
@@ -24,7 +32,7 @@ public class Disappear_projectile : MonoBehaviour
             Debug.Log(PlayerPrefs.GetInt("score"));
             //despawn projectile
             Debug.Log("Target Hit");
-            Destroy(gameObject);
+            StartCoroutine(audioKill());
         }
     }
 }

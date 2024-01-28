@@ -12,6 +12,7 @@ public class PoliceLights : MonoBehaviour
     public Transform parent;
     public float timer = 0;
     public float speed = 0;
+    public AudioSource suonoLuci;
     // Start is called before the first frame update
     void Start()
     {
@@ -42,6 +43,7 @@ public class PoliceLights : MonoBehaviour
         yield return new WaitForSeconds(5);
         speed = 0.5f; 
     }
+    
     // Update is called once per frame
     void Update()
     {

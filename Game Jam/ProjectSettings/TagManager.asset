@@ -14,6 +14,7 @@ TagManager:
   - Light
   - Punteggio
   - Aim
+  - Wall
   layers:
   - Default
   - TransparentFX
