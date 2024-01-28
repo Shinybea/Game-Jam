@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Disappear_projectile : MonoBehaviour
 {
+
       void OnCollisionEnter(Collision col)
     {
         //despawn target
@@ -11,7 +12,8 @@ public class Disappear_projectile : MonoBehaviour
         {
             Debug.Log("Collision Detected");
             Destroy(col.gameObject);
-        
+            PlayerPrefs.SetInt("score",PlayerPrefs.GetInt("score")+1);
+            Debug.Log(PlayerPrefs.GetInt("score"));
             //despawn projectile
             Debug.Log("Target Hit");
             Destroy(gameObject);

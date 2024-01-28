@@ -25,7 +25,7 @@ public class SpawnerScript : MonoBehaviour
             if(abled){
                 yield return new WaitForSeconds(spawnRate);
                 totMob = GameObject.FindGameObjectsWithTag("Bambino").Length;
-                Debug.Log(totMob);            
+                //Debug.Log(totMob);            
                 if(totMob < maxMob){
                     int rand = UnityEngine.Random.Range(0 , spawn.Length);
                     Instantiate(bambino , spawn[rand].transform.position,Quaternion.identity);
